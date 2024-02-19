@@ -6,7 +6,12 @@ const app = express()
 app.use(cookieParser())
 
 app.get('/', (req, res) => {
-	res.send('Hello world!')
+	res.send('Landing')
+})
+
+app.get('/setcookie', (req, res) => {
+	res.cookie('Cookie name', 'My cookie!')
+	res.send('Set Cookie')
 })
 
 app.listen(3000)
