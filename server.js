@@ -20,5 +20,10 @@ app.get('/setcookie', (req, res) => {
 	res.send('Set Cookie')
 })
 
+app.get('/getcookies', (req, res) => {
+	console.log(req.cookies)
+	res.send('Read cookies')
+})
+
 app.listen(3000)
 console.log(`Server listening on port 3000`)
