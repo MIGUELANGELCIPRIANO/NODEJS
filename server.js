@@ -10,7 +10,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/setcookie', (req, res) => {
-	res.cookie('Cookie name', 'My cookie!')
+	res.cookie('Cookie name', 'My cookie!', {
+		maxAge: 10000, // Maximum expiration time
+		// expires: new Date('YYYY/MM/DD'), // Expiration date
+		httpOnly: true, // Access via request
+		secure: true, // Access via https://
+		sameSite: 'lax', // 'lax' allows the cookie to be sent in some cross-site requests, while 'strict' never allows the cookie to be sent in a cross-site request.
+	})
 	res.send('Set Cookie')
 })
 
