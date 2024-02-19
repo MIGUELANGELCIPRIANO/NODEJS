@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
 	res.send('Landing')
 })
 
-app.get('/setcookie', (req, res) => {
+app.get('/setcookies', (req, res) => {
 	res.cookie('Cookie name', 'My cookie!', {
 		maxAge: 10000, // Maximum expiration time
 		// expires: new Date('YYYY/MM/DD'), // Expiration date
@@ -23,6 +23,12 @@ app.get('/setcookie', (req, res) => {
 app.get('/getcookies', (req, res) => {
 	console.log(req.cookies)
 	res.send('Read cookies')
+})
+
+app.get('/deletecookies', (req, res) => {
+	console.log(req.cookies)
+	res.clearCookie('My cookie!')
+	res.send('Cookie deleted')
 })
 
 app.listen(3000)
