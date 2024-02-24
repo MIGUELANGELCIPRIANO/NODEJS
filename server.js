@@ -15,7 +15,7 @@ app.get('/setcookies', (req, res) => {
 		// expires: new Date('YYYY/MM/DD'), // Expiration date
 		httpOnly: true, // Access via request
 		secure: true, // Access via https://
-		sameSite: 'lax', // 'lax' allows the cookie to be sent in some cross-site requests, while 'strict' never allows the cookie to be sent in a cross-site request.
+		sameSite: 'lax', // 'lax' allows the cookie to be sent in some cross-site requests, while 'strict' never allows the cookie to be sent in a cross-site request
 	})
 	res.send('Set Cookie')
 })
