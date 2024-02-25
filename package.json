@@ -1,7 +1,7 @@
 {
 	"name": "nodejs-cookies",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Creating cookies using Node.js",
 	"main": "index.js",
 	"type": "module",
 	"scripts": {
