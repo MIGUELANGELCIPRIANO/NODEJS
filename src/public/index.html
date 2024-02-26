@@ -12,9 +12,17 @@
 		<link rel="stylesheet" href="styles.css" />
 	</head>
 	<body>
-		<button class="postcookie">new cookie!</button>
-		<button class="getcookie">view cookies</button>
-		<button class="deletecookie">delete cookie</button>
+		<div>
+			<h1 aria-label="Cookies">
+				C<span class="cookie-replacement"></span
+				><span class="cookie-replacement"></span>kies
+			</h1>
+		</div>
+		<div class="button-container">
+			<button class="postcookie">new cookie!</button>
+			<button class="getcookie">view cookies</button>
+			<button class="deletecookie">delete cookie</button>
+		</div>
 		<script>
 			const newCookie = document.querySelector('.postcookie')
 			newCookie.addEventListener('click', async () => {
