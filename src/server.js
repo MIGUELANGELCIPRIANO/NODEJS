@@ -1,6 +1,5 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
-import morgan from 'morgan'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
@@ -9,36 +8,31 @@ const __dirname = path.dirname(__filename)
 
 const app = express()
 
-app.use(morgan('dev'))
-
 app.use(cookieParser())
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
-	res.send('Landing')
-})
-
-app.get('/setcookies', (req, res) => {
-	res.cookie('Cookie name', 'My cookie!', {
+app.get('/postcookie', (req, res) => {
+	res.cookie('NodeJS-Cookie', 'MyFirstCookie!', {
 		maxAge: 10000, // Maximum expiration time
 		// expires: new Date('YYYY/MM/DD'), // Expiration date
 		httpOnly: true, // Access via request
-		secure: true, // Access via https://
+		secure: true, // Important to activate access through https:// in production
 		sameSite: 'lax', // 'lax' allows the cookie to be sent in some cross-site requests, while 'strict' never allows the cookie to be sent in a cross-site request
 	})
-	res.send('Set Cookie')
+	res.json({ message: 'Cookie set successfully' })
+	console.log('Cookie set successfully')
 })
 
-app.get('/getcookies', (req, res) => {
+app.get('/getcookie', (req, res) => {
+	res.send(req.cookies)
 	console.log(req.cookies)
-	res.send('Read cookies')
 })
 
-app.get('/deletecookies', (req, res) => {
-	console.log(req.cookies)
-	res.clearCookie('My cookie!')
-	res.send('Cookie deleted')
+app.get('/deletecookie', (req, res) => {
+	res.clearCookie('NodeJS-Cookie')
+	res.json({ message: 'Cookie successfully deleted' })
+	console.log('Cookie successfully deleted')
 })
 
 app.listen(3000)
