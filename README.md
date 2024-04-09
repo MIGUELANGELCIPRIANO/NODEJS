@@ -1,6 +1,6 @@
 # NODEJS-COOKIES
 
-<img width="50%" src="https://i.postimg.cc/3xwRr6c4/NODEJS-COOKIES.png" />
+<img width="50%" src="./src/public/images/nodejs_cookies.png" />
 
 ## INTRODUCTION
 
@@ -32,3 +32,5 @@ npm i
 ```shell
 npm run dev
 ```
+
+5.
