@@ -25,35 +25,50 @@
 		</div>
 		<div class="main-content">
 			<div class="head">MiteS</div>
-			<div class="button-container">
-				<button class="postcookie">
-					<img src="./images/skrelv_defector_mite.png" class="new-cookie" />
+			<div class="button">
+				<button class="postmite">
+					<img src="./images/skrelv_defector_mite.png" alt="new_mite" />
 				</button>
-				<button class="getcookie">
-					<img src="./images/skrelv_defector_mite.png" class="view-cookie" />
+				<button class="getmite">
+					<img src="./images/skrelv_defector_mite.png" alt="view_mite" />
 				</button>
-				<button class="deletecookie">
-					<img src="./images/skrelv_defector_mite.png" class="delete-cookie" />
+				<button class="deletemite">
+					<img src="./images/skrelv_defector_mite.png" alt="delete_mite" />
 				</button>
 			</div>
 			<script>
-				const newCookie = document.querySelector('.postcookie')
-				newCookie.addEventListener('click', async () => {
-					await fetch('/postcookie', {
+				const newMite = document.querySelector('.postmite')
+				newMite.addEventListener('click', async () => {
+					await fetch('/postmite', {
 						method: 'GET',
 					})
+					newMite.classList.add('animate')
+
+					setTimeout(() => {
+						newMite.classList.remove('animate')
+					}, 600)
 				})
-				const getCookie = document.querySelector('.getcookie')
-				getCookie.addEventListener('click', async () => {
-					await fetch('/getcookie', {
+				const getMite = document.querySelector('.getmite')
+				getMite.addEventListener('click', async () => {
+					await fetch('/getmite', {
 						method: 'GET',
 					})
+					getMite.classList.add('animate')
+
+					setTimeout(() => {
+						getMite.classList.remove('animate')
+					}, 600)
 				})
-				const deleteCookie = document.querySelector('.deletecookie')
-				deleteCookie.addEventListener('click', async () => {
-					await fetch('/deletecookie', {
+				const deleteMite = document.querySelector('.deletemite')
+				deleteMite.addEventListener('click', async () => {
+					await fetch('/deletemite', {
 						method: 'GET',
 					})
+					deleteMite.classList.add('animate')
+
+					setTimeout(() => {
+						deleteMite.classList.remove('animate')
+					}, 600)
 				})
 			</script>
 		</div>
