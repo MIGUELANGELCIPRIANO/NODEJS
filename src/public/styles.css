@@ -20,7 +20,7 @@ body {
 	height: 100%;
 	background: url(./images/phyrexia_white_land.png) no-repeat center center;
 	background-size: cover;
-	filter: blur(2px);
+	filter: blur(5px);
 	z-index: -1;
 }
 
@@ -60,7 +60,7 @@ body {
 	margin-top: -1.25rem; /* 20px */
 }
 
-.button-container {
+.button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -69,23 +69,410 @@ body {
 	gap: 20px;
 }
 
-.button-container button {
+.button button {
 	background: none;
 	border: none;
 	padding: 0;
 	filter: drop-shadow(0 0 10px rgb(0, 0, 0));
-	transition: all 0.3s;
+	transition: transform 0.2s ease;
 }
 
-.button-container button:hover {
-	transform: scale(1.25);
-	filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+.button img {
+	width: 25rem; /* 400px */
+	height: auto;
 	cursor: pointer;
 }
 
-.button-container img {
-	width: 25rem; /* 400px */
-	height: auto;
+button:hover {
+	transform: scale(1.15);
+}
+
+button:active {
+	transform: scale(0.85);
+}
+
+button::before,
+button::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	height: 120%;
+	width: 150%;
+	z-index: -1;
+	background-repeat: no-repeat;
+}
+
+.postmite.animate::before {
+	top: -70%;
+	background-image: radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, transparent 20%, #73ee00 20%, transparent 30%),
+		radial-gradient(circle, #73ee00 20%, transparent 30%),
+		radial-gradient(circle, transparent 10%, #73ee00 15%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%);
+	background-size:
+		10% 10%,
+		20% 20%,
+		15% 20%,
+		20% 20%,
+		18% 18%,
+		10% 10%,
+		15% 15%,
+		18% 18%;
+	background-position:
+		15% 100%,
+		25% 100%,
+		20% 100%,
+		15% 100%,
+		25% 100%,
+		25% 100%,
+		40% 100%,
+		55% 90%,
+		70% 100%;
+	animation: topBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes topBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			0% 20%,
+			10% 40%,
+			20% 0%,
+			30% 30%,
+			22% 50%,
+			50% 50%,
+			65% 20%,
+			90% 30%;
+	}
+	100% {
+		background-position:
+			0% 70%,
+			0% 10%,
+			10% 30%,
+			20% -10%,
+			30% 20%,
+			22% 40%,
+			50% 40%,
+			65% 10%,
+			90% 20%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
+}
+
+.postmite.animate::after {
+	bottom: -70%;
+	background-image: radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, transparent 10%, #73ee00 15%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%),
+		radial-gradient(circle, #73ee00 20%, transparent 20%);
+	background-size:
+		15% 15%,
+		20% 20%,
+		18% 18%,
+		20% 20%,
+		15% 15%,
+		20% 20%,
+		18% 18%;
+	background-position:
+		10% 0%,
+		30% 10%,
+		55% 0%,
+		70% 0%,
+		85% 0%,
+		70% 0%,
+		70% 0%;
+	animation: bottomBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes bottomBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			20% 80%,
+			45% 60%,
+			60% 100%,
+			75% 70%,
+			95% 60%,
+			105% 0%;
+	}
+	100% {
+		background-position:
+			0% 90%,
+			20% 90%,
+			45% 70%,
+			60% 110%,
+			75% 80%,
+			95% 70%,
+			110% 10%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
+}
+
+.getmite.animate::before {
+	top: -70%;
+	background-image: radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, transparent 20%, #00ccff 20%, transparent 30%),
+		radial-gradient(circle, #00ccff 20%, transparent 30%),
+		radial-gradient(circle, transparent 10%, #00ccff 15%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%);
+	background-size:
+		10% 10%,
+		20% 20%,
+		15% 20%,
+		20% 20%,
+		18% 18%,
+		10% 10%,
+		15% 15%,
+		18% 18%;
+	background-position:
+		15% 100%,
+		25% 100%,
+		20% 100%,
+		15% 100%,
+		25% 100%,
+		25% 100%,
+		40% 100%,
+		55% 90%,
+		70% 100%;
+	animation: topBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes topBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			0% 20%,
+			10% 40%,
+			20% 0%,
+			30% 30%,
+			22% 50%,
+			50% 50%,
+			65% 20%,
+			90% 30%;
+	}
+	100% {
+		background-position:
+			0% 70%,
+			0% 10%,
+			10% 30%,
+			20% -10%,
+			30% 20%,
+			22% 40%,
+			50% 40%,
+			65% 10%,
+			90% 20%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
+}
+
+.getmite.animate::after {
+	bottom: -70%;
+	background-image: radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, transparent 10%, #00ccff 15%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%),
+		radial-gradient(circle, #00ccff 20%, transparent 20%);
+	background-size:
+		15% 15%,
+		20% 20%,
+		18% 18%,
+		20% 20%,
+		15% 15%,
+		20% 20%,
+		18% 18%;
+	background-position:
+		10% 0%,
+		30% 10%,
+		55% 0%,
+		70% 0%,
+		85% 0%,
+		70% 0%,
+		70% 0%;
+	animation: bottomBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes bottomBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			20% 80%,
+			45% 60%,
+			60% 100%,
+			75% 70%,
+			95% 60%,
+			105% 0%;
+	}
+	100% {
+		background-position:
+			0% 90%,
+			20% 90%,
+			45% 70%,
+			60% 110%,
+			75% 80%,
+			95% 70%,
+			110% 10%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
+}
+
+.deletemite.animate::before {
+	top: -70%;
+	background-image: radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, transparent 20%, #ff3a20 20%, transparent 30%),
+		radial-gradient(circle, #ff3a20 20%, transparent 30%),
+		radial-gradient(circle, transparent 10%, #ff3a20 15%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%);
+	background-size:
+		10% 10%,
+		20% 20%,
+		15% 20%,
+		20% 20%,
+		18% 18%,
+		10% 10%,
+		15% 15%,
+		18% 18%;
+	background-position:
+		15% 100%,
+		25% 100%,
+		20% 100%,
+		15% 100%,
+		25% 100%,
+		25% 100%,
+		40% 100%,
+		55% 90%,
+		70% 100%;
+	animation: topBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes topBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			0% 20%,
+			10% 40%,
+			20% 0%,
+			30% 30%,
+			22% 50%,
+			50% 50%,
+			65% 20%,
+			90% 30%;
+	}
+	100% {
+		background-position:
+			0% 70%,
+			0% 10%,
+			10% 30%,
+			20% -10%,
+			30% 20%,
+			22% 40%,
+			50% 40%,
+			65% 10%,
+			90% 20%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
+}
+
+.deletemite.animate::after {
+	bottom: -70%;
+	background-image: radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, transparent 10%, #ff3a20 15%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%),
+		radial-gradient(circle, #ff3a20 20%, transparent 20%);
+	background-size:
+		15% 15%,
+		20% 20%,
+		18% 18%,
+		20% 20%,
+		15% 15%,
+		20% 20%,
+		18% 18%;
+	background-position:
+		10% 0%,
+		30% 10%,
+		55% 0%,
+		70% 0%,
+		85% 0%,
+		70% 0%,
+		70% 0%;
+	animation: bottomBubbles 0.6s ease-in-out forwards;
+}
+
+@keyframes bottomBubbles {
+	50% {
+		background-position:
+			0% 80%,
+			20% 80%,
+			45% 60%,
+			60% 100%,
+			75% 70%,
+			95% 60%,
+			105% 0%;
+	}
+	100% {
+		background-position:
+			0% 90%,
+			20% 90%,
+			45% 70%,
+			60% 110%,
+			75% 80%,
+			95% 70%,
+			110% 10%;
+		background-size:
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%,
+			0% 0%;
+	}
 }
 
 .footer {
