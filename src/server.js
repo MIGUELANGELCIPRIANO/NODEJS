@@ -12,27 +12,27 @@ app.use(cookieParser())
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/postcookie', (req, res) => {
-	res.cookie('NodeJS-Cookie', 'MyFirstCookie!', {
+app.get('/postmite', (req, res) => {
+	res.cookie('Mite', 'Skrelv', {
 		maxAge: 10000, // Maximum expiration time
 		// expires: new Date('YYYY/MM/DD'), // Expiration date
 		httpOnly: true, // Access via request
 		secure: true, // Important to activate access through https:// in production
 		sameSite: 'lax', // 'lax' allows the cookie to be sent in some cross-site requests, while 'strict' never allows the cookie to be sent in a cross-site request
 	})
-	res.json({ message: 'Cookie set successfully' })
-	console.log('Cookie set successfully')
+	res.json({ message: 'Mite successfully created!' })
+	console.log('Mite successfully created!')
 })
 
-app.get('/getcookie', (req, res) => {
+app.get('/getmite', (req, res) => {
 	res.send(req.cookies)
 	console.log(req.cookies)
 })
 
-app.get('/deletecookie', (req, res) => {
-	res.clearCookie('NodeJS-Cookie')
-	res.json({ message: 'Cookie successfully deleted' })
-	console.log('Cookie successfully deleted')
+app.get('/deletemite', (req, res) => {
+	res.clearCookie('Mite')
+	res.json({ message: 'Mite successfully deleted' })
+	console.log('Mite successfully deleted')
 })
 
 app.listen(3000)
