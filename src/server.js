@@ -30,9 +30,14 @@ app.get('/getmite', (req, res) => {
 })
 
 app.get('/deletemite', (req, res) => {
-	res.clearCookie('Mite')
-	res.json({ message: 'Mite successfully deleted' })
-	console.log('Mite successfully deleted')
+	if (req.cookies.Mite) {
+		res.clearCookie('Mite')
+		res.json({ message: 'Mite successfully deleted' })
+		console.log('Mite successfully deleted')
+	} else {
+		res.json({ message: 'No mites found to delete' })
+		console.log('No mites found to delete')
+	}
 })
 
 app.listen(3000)
