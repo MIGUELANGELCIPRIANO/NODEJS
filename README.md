@@ -1,6 +1,6 @@
 # NODEJS-COOKIES
 
-<img width="50%" src="./src/public/images/nodejs_cookies.png" />
+<img width="50%" src="./src/public/images/nodejs_cookies_template.png" />
 
 ## INTRODUCTION
 
