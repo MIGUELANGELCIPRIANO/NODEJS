@@ -33,7 +33,67 @@ npm i
 npm run dev
 ```
 
-5.
+5. Open the software in your local browser and right-click to select the "Inspect" option.
+
+<br />
+
+<img width="50%" src="./src/public/images/option_inspect_page.png" />
+
+<br />
+
+6. Go to "Application" => "Cookies".
+
+<br />
+
+<img width="50%" src="./src/public/images/application_cookies.png" />
+
+<br />
+
+7. Click on the first skrelv. Congratulations! you have created your first mite cookie!
+
+<br />
+
+<img width="50%" src="./src/public/images/create_mite.png" />
+
+<br />
+
+8. You can also verify the message by console.
+
+<br />
+
+<img width="50%" src="./src/public/images/mite_successfully_created.png" />
+
+<br />
+
+9. Click on the second skrelv to see your mite cookie by console.
+
+<br />
+
+<img width="50%" src="./src/public/images/view_mite.png" />
+
+<br />
+
+10. Click on the third skrelv to delete your mite cookie.
+
+<br />
+
+<img width="50%" src="./src/public/images/application_cookies.png" />
+
+<br />
+
+11. You can also verify the message by console.
+
+<br />
+
+<img width="50%" src="./src/public/images/mite_successfully_deleted.png" />
+
+<br />
+
+12. By clicking again on the second and third skrelv we will corroborate by console that no mite cookies were found. <br /> Keep in mind that the mite cookie has an expiration time of 10 seconds so, after executing the previous step after this time after having created the mite cookie, it will show the same messages.
+
+<br />
+
+<img width="50%" src="./src/public/images/no_mites_found.png" />
 
 ## LICENSE
 
