@@ -18,7 +18,8 @@ Cookies are not related to a specific framework, so you can use any other **Node
 
 https://nodejs.org/en
 
-2. Execute the command from the terminal located at ./NODEJS-COOKIES.
+2. Use the **npm** package manager to install.
+3. Execute the command from the terminal located at ./NODEJS-COOKIES.
 
 ```shell
 npm i
@@ -26,14 +27,14 @@ npm i
 
 ## EXECUTION
 
-3. Use the **npm** package manager to run.
-4. Execute the command from the terminal located at ./NODEJS-COOKIES.
+4. Use the **npm** package manager to run.
+5. Execute the command from the terminal located at ./NODEJS-COOKIES.
 
 ```shell
 npm run dev
 ```
 
-5. Open the software in your local browser and right-click to select the "Inspect" option.
+6. Open the software in your local browser and right-click to select the "Inspect" option.
 
 <br />
 
@@ -41,7 +42,7 @@ npm run dev
 
 <br />
 
-6. Go to "Application" => "Cookies".
+7. Go to "Application" => "Cookies".
 
 <br />
 
@@ -49,7 +50,7 @@ npm run dev
 
 <br />
 
-7. Click on the first skrelv. Congratulations! you have created your first mite cookie!
+8. Click on the first skrelv. Congratulations! you have created your first mite cookie!
 
 <br />
 
@@ -57,7 +58,7 @@ npm run dev
 
 <br />
 
-8. You can also verify the message by console.
+9. You can also verify the message by console.
 
 <br />
 
@@ -65,7 +66,7 @@ npm run dev
 
 <br />
 
-9. Click on the second skrelv to see your mite cookie by console.
+10. Click on the second skrelv to see your mite cookie by console.
 
 <br />
 
@@ -73,7 +74,7 @@ npm run dev
 
 <br />
 
-10. Click on the third skrelv to delete your mite cookie.
+11. Click on the third skrelv to delete your mite cookie.
 
 <br />
 
@@ -81,7 +82,7 @@ npm run dev
 
 <br />
 
-11. You can also verify the message by console.
+12. You can also verify the message by console.
 
 <br />
 
@@ -89,7 +90,7 @@ npm run dev
 
 <br />
 
-12. By clicking again on the second and third skrelv we will corroborate by console that no mite cookies were found. <br /> Keep in mind that the mite cookie has an expiration time of 10 seconds so, after executing the previous step after this time after having created the mite cookie, it will show the same messages.
+13. By clicking again on the second and third skrelv we will corroborate by console that no mite cookies were found. <br /> Keep in mind that the mite cookie has an expiration time of 10 seconds so, after executing the previous step after this time after having created the mite cookie, it will show the same messages.
 
 <br />
 
